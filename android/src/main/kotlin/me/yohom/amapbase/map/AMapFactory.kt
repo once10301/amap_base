@@ -6,8 +6,10 @@ import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import com.amap.api.maps.AMap
 import com.amap.api.maps.AMapOptions
 import com.amap.api.maps.TextureMapView
+import com.amap.api.maps.model.CameraPosition
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.StandardMessageCodec
@@ -21,6 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 const val mapChannelName = "me.yohom/map"
 const val markerClickedChannelName = "me.yohom/marker_clicked"
+const val mapDragChangeChannelName = "me.yohom/map_drag_change"
 const val success = "调用成功"
 
 class AMapFactory(private val activityState: AtomicInteger)
